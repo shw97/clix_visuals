@@ -1,0 +1,58 @@
+---
+layout: projectpages
+title: "Tools Data Visualisation"
+author: "partha"
+categories: visualisationtype
+caption: Explore data related to tools section of platform
+tags: [tools, visualisation]
+image:
+      feature : visuals_ss.png	
+---
+ These visualisations are based on data generated due to interaction with tools section of the platform. They are mainly based on three metrics for each tool- total number of days accessed, average number of students in a day and average time spent by a student in a day.
+<!--
+ <meta charset="utf-8">
+ <style>
+ 
+ body {
+   font: 10px sans-serif;
+   }
+
+ .axis path,
+ .axis line {
+   fill: none;
+   stroke: #000;
+   shape-rendering: crispEdges;
+ }
+
+ .bar {
+   fill: steelblue;
+ }
+
+ .x.axis path {
+  display: none;
+ }
+
+ .tooltip{
+  text-anchor: middle;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  fill:black;
+ }
+
+</style>
+-->
+<div>
+	{% for post in site.categories.visuals %}
+	<a style = "text-decoration: none" href={{site.github}}{{post.url}}>
+		<figure>
+		 <img src = {{site.github.url}}/images/{{post.image.feature}} alt = "image">
+		 <figcaption>
+                      {{post.caption}}
+	         </figcaption>	 
+		</figure>
+
+        </a>
+  {% endfor %}
+  
+</div>

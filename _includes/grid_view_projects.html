@@ -1,0 +1,28 @@
+
+<h3 style = "text-align: center";>  </h3>
+<p style = "text-align: center"> This website contains various visualisation to explore CLix platform data. These are curated and maintained by tech team of CLix project to make platform data more accessible to other teams across CLix community. Please contact us if you have any specific requirement of platform data or need any clarification regarding these visulizations.
+</p>
+
+
+<div>
+{% for item in site.data.settings.homegriditems %}
+	<article class = "card-projects-view" >
+    	    <header class="card-header">
+  		   <p class= "card-suptitle">
+			{{item.mintitle}}
+		    </p>
+                    <h1 class="card-title">
+	               <a href = "{{ site.github.url }}/pages/{{ item.file }}" title="View more"> 
+{{item.title}} </a>
+	            </h1>
+             </header>
+	     <div class="card-body">
+	        <div class="card-prose">
+		  <p style = "text-align: left; line-height: 1rem"> 
+			{{item.prose}} 
+		  </p>
+	        </div>
+	     </div>
+	 </article>
+{% endfor %} 
+</div>

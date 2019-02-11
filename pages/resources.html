@@ -1,0 +1,20 @@
+---
+layout: projectpages
+title: Resources
+---
+<p style = "text-align: center"; "font-family: helvetica"> We documented all the interesting resources we come across during our work and research. This is intended to be a repository of knowledge we have used in our work in one or the other way.
+</p>
+
+<div >
+{% for post in site.categories.resources %}
+<a style = "text-decoration: none" href="/coming_soon.html">
+	<figure>
+	<img src = {{site.github.url}}/images/{{post.image.feature}} alt= "image">
+         <figcaption>
+		{{post.caption}}
+	</figcaption>  	 
+	</figure>
+   </a>
+
+{% endfor %} 
+</div>
